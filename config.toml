@@ -10,7 +10,6 @@ SectionPagesMenu = "main" # Enable menu system for lazy bloggers
 footnoteReturnLinkContents = "↩" # Provides a nicer footnote return link
 PygmentsCodeFences = true
 PygmentsStyle = "dracula"
-publishDir = "docs"
 
 [params]
   description = "Frontend, Backend, but mainly Nodend." # Suggested, controls default description meta
