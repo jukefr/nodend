@@ -1,0 +1,19 @@
+{{ define "title" -}}
+  {{ .Site.Title }}
+{{- end }}
+{{ define "header" }}
+  {{ partial "menu.html" . }}
+{{ end }}
+{{ define "main" }}
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+  {{ range (.Paginate (where .Data.Pages "Section" "in" (slice "post" "snippet"))).Pages }}
+    {{ partial "page-summary.html" . }}
+    <hr>
+  {{ end }}
+{{ end }}
+{{ define "footer" }}
+  {{ partial "pagination.html" . }}
+  {{ partial "powered-by.html" . }}
+{{ end }}

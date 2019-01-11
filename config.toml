@@ -1,0 +1,57 @@
+baseurl = "https://nodend.com/" # Controls base URL
+languageCode = "en-US" # Controls site language
+title = "nodend" # Homepage title and page title suffix
+paginate = 11 # Number of posts to show before paginating
+related_content_limit = 5
+enableRobotsTXT = true # Suggested, enable robots.txt file
+googleAnalytics = "UA-122324656-1" # Optional, add tracking Id for analytics
+disqusShortname = "nodend" # Optional, add Disqus shortname for comments
+SectionPagesMenu = "main" # Enable menu system for lazy bloggers
+footnoteReturnLinkContents = "↩" # Provides a nicer footnote return link
+PygmentsCodeFences = true
+PygmentsStyle = "dracula"
+publishDir = "docs"
+
+[params]
+  description = "Frontend, Backend, but mainly Nodend." # Suggested, controls default description meta
+  author = "Kevin" # Optional, controls author name display on posts
+  hide_author = false # Optional, set true to hide author name on posts
+  show_menu = true # Optional, set true to enable section menu
+  powered_by = false # Optional, set false to disable credits
+  images = [
+    "/opengraph.png" # Default Open Graph image for site
+  ]
+  theme_variant = "hack dracula" # Optional, for use to overriding default theme
+  search = true
+
+[[menu.main]]
+  name = "Home"
+  weight = 1
+  identifier = "home"
+  url = "/"
+#[[menu.main]] TODO: uncomment when the article is done.
+#  name = "Posts"
+#  weight = 2
+#  identifier = "post"
+#  url = "/post/"
+#  type = "article"
+[[menu.main]]
+  name = "Snippets"
+  weight = 3
+  identifier = "snippet"
+  url = "/snippet/"
+  type = "article"
+[[menu.main]]
+  name = "Bio"
+  weight = 4
+  identifier = "bio"
+  url = "/bio/"
+[[menu.main]]
+  name = "Search"
+  weight = 5
+  identifier = "search"
+  url = "/search/"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS", "JSON"]

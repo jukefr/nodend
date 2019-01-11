@@ -1,0 +1,26 @@
+<article itemscope itemtype="http://schema.org/CreativeWork">
+  <header>
+    <h2 itemprop="name">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      #{{ .Type }}
+    </h2>
+    {{ if or (eq .Type "post") (eq .Type "snippet") }}
+      <p class="muted">{{ partial "post/meta.html" . }}</p>
+    {{ end }}
+  </header>
+  {{ if .Description }}
+    <blockquote itemprop="headline">{{ .Description }}</blockquote>
+  {{ end }}
+  <div itemprop="description">
+    {{ .Summary }}
+  </div>
+  {{ if and (.Truncated) (eq .Type "post") }}
+    <nav class="readmore"><a itemprop="url" href="{{ .RelPermalink }}">Read More&nbsp;&raquo;</a></nav>
+  {{ end }}
+  <meta itemprop="inLanguage" content="{{ .Site.LanguageCode }}">
+  <meta itemprop="datePublished" content="{{ dateFormat "2006-01-02T15:04:05-07:00" (default .Date (.PublishDate)) }}">
+  <meta itemprop="dateModified" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}">
+  {{ with .Params.images }}
+    <meta itemprop="image" content="{{ index . 0 }}">
+  {{ end }}
+</article>
