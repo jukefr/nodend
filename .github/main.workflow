@@ -58,7 +58,7 @@ action "Add CNAME" {
 action "Git Add" {
   uses = "jukefr/actions/git@master"
   needs = ["Add CNAME"]
-  args = ["add -f public"]
+  args = ["-C public add --all"]
 }
 
 action "Git Commit" {
