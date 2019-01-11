@@ -1,7 +1,7 @@
 workflow "Master Publish" {
   on = "push"
   resolves = [
-    "Finish"
+    "Finish",
   ]
 }
 
@@ -23,9 +23,9 @@ action "Create Public" {
 }
 
 action "Clean Worktree" {
-  uses = "actions/bin/sh@master"
+  uses = "jukefr/actions/git@master"
   needs = ["Create Public"]
-  args = ["git worktree prune"]
+  args = ["worktree prune"]
 }
 
 action "Clean Worktree More" {
@@ -35,9 +35,9 @@ action "Clean Worktree More" {
 }
 
 action "Checkout GH-PAGES" {
-  uses = "actions/bin/sh@master"
+  uses = "jukefr/actions/git@master"
   needs = ["Clean Worktree More"]
-  args = ["git worktree add -B gh-pages public origin/gh-pages"]
+  args = ["worktree add -B gh-pages public origin/gh-pages"]
 }
 
 action "Clean Dist" {
@@ -71,16 +71,13 @@ action "Add CNAME" {
 }
 
 action "Commit" {
-  uses = "actions/bin/sh@master"
+  uses = "jukefr/actions/git@master"
   needs = ["Add CNAME"]
   args = ["cd public && git add --all && git commit -m github-actions-build"]
 }
 
 action "Finish" {
-  uses = "actions/bin/sh@master"
+  uses = "jukefr/actions/git@master"
   needs = ["Commit"]
-  args = ["git push origin gh-pages"]
+  args = ["push origin gh-pages"]
 }
-
-
-
