@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Imagemagick on nodend</title>
+    <link>https://nodend.com/tags/imagemagick/</link>
+    <description>Recent content in Imagemagick on nodend</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 15 Jul 2018 03:11:01 +0200</lastBuildDate>
+    
+	<atom:link href="https://nodend.com/tags/imagemagick/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Instant Alpha on PNG</title>
+      <link>https://nodend.com/snippet/instant-alpha/</link>
+      <pubDate>Sun, 15 Jul 2018 03:11:01 +0200</pubDate>
+      
+      <guid>https://nodend.com/snippet/instant-alpha/</guid>
+      <description>Snippet Fish 1 2 3  function instantalpha convert $argv[1] -fuzz $argv[2]% -transparent $argv[3] $argv[1].alpha.png end   Bash 1 2 3  function instantalpha { convert &amp;#34;$1&amp;#34; -fuzz &amp;#34;$2&amp;#34;% -transparent &amp;#34;$3&amp;#34; &amp;#34;$1&amp;#34;.alpha.png }    Usage 1 2 3 4  # file | source png, output will be .alpha.png # -fuzz distance | colors within this distance are considered equal # -transparent color | make this color transparent within the image instantalpha image.</description>
+    </item>
+    
+  </channel>
+</rss>

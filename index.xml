@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodend</title>
+    <link>https://nodend.com/</link>
+    <description>Recent content on nodend</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 11 Jan 2019 03:11:01 +0200</lastBuildDate>
+    
+	<atom:link href="https://nodend.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ricing macOs in 2019</title>
+      <link>https://nodend.com/post/ricing-macos/</link>
+      <pubDate>Fri, 11 Jan 2019 03:11:01 +0200</pubDate>
+      
+      <guid>https://nodend.com/post/ricing-macos/</guid>
+      <description>Currently being written come back later.
+  macos ricing demo here is what the end result of what I am going to be talking about looks like.    </description>
+    </item>
+    
+    <item>
+      <title>Bio</title>
+      <link>https://nodend.com/bio/</link>
+      <pubDate>Sun, 15 Jul 2018 16:15:18 +0200</pubDate>
+      
+      <guid>https://nodend.com/bio/</guid>
+      <description>My name is Kevin
+I live in France and currently work for a Paris based startup called travelcar 
+I really like code, and sharing my coding knowledge
+If you want to discover more of my work, you can check my github 
+Hope you enjoy your stay.</description>
+    </item>
+    
+    <item>
+      <title>Instant Alpha on PNG</title>
+      <link>https://nodend.com/snippet/instant-alpha/</link>
+      <pubDate>Sun, 15 Jul 2018 03:11:01 +0200</pubDate>
+      
+      <guid>https://nodend.com/snippet/instant-alpha/</guid>
+      <description>Snippet Fish 1 2 3  function instantalpha convert $argv[1] -fuzz $argv[2]% -transparent $argv[3] $argv[1].alpha.png end   Bash 1 2 3  function instantalpha { convert &amp;#34;$1&amp;#34; -fuzz &amp;#34;$2&amp;#34;% -transparent &amp;#34;$3&amp;#34; &amp;#34;$1&amp;#34;.alpha.png }    Usage 1 2 3 4  # file | source png, output will be .alpha.png # -fuzz distance | colors within this distance are considered equal # -transparent color | make this color transparent within the image instantalpha image.</description>
+    </item>
+    
+  </channel>
+</rss>

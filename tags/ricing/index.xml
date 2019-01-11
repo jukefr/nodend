@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ricing on nodend</title>
+    <link>https://nodend.com/tags/ricing/</link>
+    <description>Recent content in Ricing on nodend</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 11 Jan 2019 03:11:01 +0200</lastBuildDate>
+    
+	<atom:link href="https://nodend.com/tags/ricing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ricing macOs in 2019</title>
+      <link>https://nodend.com/post/ricing-macos/</link>
+      <pubDate>Fri, 11 Jan 2019 03:11:01 +0200</pubDate>
+      
+      <guid>https://nodend.com/post/ricing-macos/</guid>
+      <description>Currently being written come back later.
+  macos ricing demo here is what the end result of what I am going to be talking about looks like.    </description>
+    </item>
+    
+  </channel>
+</rss>
