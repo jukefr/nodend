@@ -71,4 +71,5 @@ action "Git Push" {
   uses = "jukefr/actions/git@master"
   args = ["push origin gh-pages"]
   needs = ["Git Commit"]
+  secrets = ["GIT_TOKEN", "GIT_USER"]
 }
