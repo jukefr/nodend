@@ -28,12 +28,12 @@ PygmentsStyle = "dracula"
   weight = 1
   identifier = "home"
   url = "/"
-#[[menu.main]] TODO: uncomment when the article is done.
-#  name = "Posts"
-#  weight = 2
-#  identifier = "post"
-#  url = "/post/"
-#  type = "article"
+[[menu.main]]
+  name = "Posts"
+  weight = 2
+  identifier = "post"
+  url = "/post/"
+  type = "article"
 [[menu.main]]
   name = "Snippets"
   weight = 3
