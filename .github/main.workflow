@@ -46,34 +46,27 @@ action "Clean Dist" {
   args = ["rm -rf public/*"]
 }
 
-action "Download" {
-  uses = "actions/bin/sh@master"
-  needs = ["Clean Dist"]
-  args = ["wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_extended_0.53_Linux-64bit.deb"]
-}
-
-action "Install Hugo" {
-  uses = "actions/bin/sh@master"
-  needs = ["Download"]
-  args = ["dpkg -i /tmp/hugo.deb"]
-}
-
 action "Build Public" {
-  uses = "actions/bin/sh@master"
-  needs = ["Install Hugo"]
-  args = ["hugo"]
+  uses = "jukefr/actions/hugo@master"
+  needs = ["Clean Dist"]
 }
 
 action "Add CNAME" {
   uses = "actions/bin/sh@master"
   needs = ["Build Public"]
-  args = ["echo nodend.com >> CNAME"]
+  args = ["echo nodend.com >> public/CNAME"]
+}
+
+action "Git Add" {
+  uses = "jukefr/actions/git@master"
+  needs = ["Add CNAME"]
+  args = ["add public/*"]
 }
 
 action "Commit" {
   uses = "jukefr/actions/git@master"
-  needs = ["Add CNAME"]
-  args = ["cd public && git add --all && git commit -m github-actions-build"]
+  needs = ["Git Add"]
+  args = ["commit -m github-actions-build"]
 }
 
 action "Finish" {
