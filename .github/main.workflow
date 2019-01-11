@@ -1,8 +1,6 @@
 workflow "Master Publish" {
   on = "push"
-  resolves = [
-    "Finish"
-  ]
+  resolves = ["Git Push"]
 }
 
 action "isMaster" {
@@ -10,7 +8,7 @@ action "isMaster" {
   args = "branch master"
 }
 
-action "Clean Public" {
+action "Remove Public" {
   uses = "actions/bin/sh@master"
   needs = ["isMaster"]
   args = ["rm -rf public"]
@@ -19,7 +17,7 @@ action "Clean Public" {
 action "Create Public" {
   uses = "actions/bin/sh@master"
   args = ["mkdir public"]
-  needs = ["Clean Public"]
+  needs = ["Remove Public"]
 }
 
 action "Clean Worktree" {
@@ -28,33 +26,33 @@ action "Clean Worktree" {
   args = ["worktree prune"]
 }
 
-action "Clean Worktree More" {
+action "Clean Worktree Public" {
   uses = "actions/bin/sh@master"
   needs = ["Clean Worktree"]
   args = ["rm -rf .git/worktrees/public/"]
 }
 
-action "Checkout GH-PAGES" {
+action "Checkout gh-pages" {
   uses = "jukefr/actions/git@master"
-  needs = ["Clean Worktree More"]
   args = ["worktree add -B gh-pages public origin/gh-pages"]
+  needs = ["Clean Worktree Public"]
 }
 
-action "Clean Dist" {
+action "Clean Public (gh-pages)" {
   uses = "actions/bin/sh@master"
-  needs = ["Checkout GH-PAGES"]
   args = ["rm -rf public/*"]
+  needs = ["Checkout gh-pages"]
 }
 
-action "Build Public" {
+action "Build" {
   uses = "jukefr/actions/hugo@master"
-  needs = ["Clean Dist"]
+  needs = ["Clean Public (gh-pages)"]
 }
 
 action "Add CNAME" {
   uses = "actions/bin/sh@master"
-  needs = ["Build Public"]
   args = ["echo nodend.com >> public/CNAME"]
+  needs = ["Build"]
 }
 
 action "Git Add" {
@@ -63,14 +61,14 @@ action "Git Add" {
   args = ["add -f public"]
 }
 
-action "Commit" {
+action "Git Commit" {
   uses = "jukefr/actions/git@master"
   needs = ["Git Add"]
   args = ["-C public commit -m github-actions-build"]
 }
 
-action "Finish" {
+action "Git Push" {
   uses = "jukefr/actions/git@master"
-  needs = ["Commit"]
   args = ["push origin gh-pages"]
+  needs = ["Git Commit"]
 }
