@@ -1,7 +1,7 @@
 workflow "Master Publish" {
   on = "push"
   resolves = [
-    "Finish",
+    "Finish"
   ]
 }
 
@@ -60,13 +60,13 @@ action "Add CNAME" {
 action "Git Add" {
   uses = "jukefr/actions/git@master"
   needs = ["Add CNAME"]
-  args = ["add public/*"]
+  args = ["add -f public"]
 }
 
 action "Commit" {
   uses = "jukefr/actions/git@master"
   needs = ["Git Add"]
-  args = ["commit -m github-actions-build"]
+  args = ["-C public commit -m github-actions-build"]
 }
 
 action "Finish" {
