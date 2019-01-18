@@ -16,8 +16,7 @@ images = [
 type = "article"
 
 +++
-
-
+<span></span>
 <!--more-->
 
 ## Snippet

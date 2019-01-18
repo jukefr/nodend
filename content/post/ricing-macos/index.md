@@ -12,11 +12,11 @@ images = [
   src = "images/demo.bpg"
   name = "demo"
 +++
-
-
+<span></span>
 <!--more-->
 
 Currently being written come back later.
 
 {{< lazy name="demo" caption="here is what the end result of what I am going to be talking about looks like." alt="screenshot of my desktop showing two iTerm2 windows and a browser window, with a tiling window manager" title="macos ricing demo" >}}
+
 
