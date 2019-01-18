@@ -2,8 +2,6 @@
 title = "Up and Running with Hugo"
 date = 2018-07-15T03:11:01+02:00
 description = "From A to Z for my new blog setup."
-toc = true
-draft = true
 categories = ["fullstack"]
 tags = ["hugo"]
 images = [
@@ -13,40 +11,14 @@ images = [
   src = "images/latency.bpg"
   name = "latency"
 +++
-
-Currently being written... Please come back later.
-
+<span></span>
 <!--more-->
-# Concept
-## Data Architecture
-## Let's just do it...
+# Formula
+1. Hugo
+2. Github Pages
+3. Github Actions
 
-# Chosing a Stack
-## Node ?
-## Ruby ?
-## Meteor ?
-## Nuxt ?
-## Django ?
-## Vulcan ?
-## Wordpress ? /s
-
-# Netlify ?
-## To much boilerplate that is not needed
-
-# Hugo
-## Figuring stuff out
-
-# Designing
-## After Dark
-## Dracula Custom
-
-# Magic
-## Husky
-We pretty much got netlify with a single git hook command...
-
-## Github Pages with Custom domain and SSL
-
-# Wrapping Up
+# Result
 Total time spent on setup : **4-6 hours**
 
 Total time spent on benchmarking*: **100+ hours**
