@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fullstack on nodend</title>
+    <link>https://nodend.com/categories/fullstack/</link>
+    <description>Recent content in Fullstack on nodend</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 15 Jul 2018 03:11:01 +0200</lastBuildDate>
+    
+	<atom:link href="https://nodend.com/categories/fullstack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Up and Running with Hugo</title>
+      <link>https://nodend.com/post/up-and-running-with-hugo/</link>
+      <pubDate>Sun, 15 Jul 2018 03:11:01 +0200</pubDate>
+      
+      <guid>https://nodend.com/post/up-and-running-with-hugo/</guid>
+      <description>&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
