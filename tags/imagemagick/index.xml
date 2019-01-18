@@ -17,7 +17,7 @@
       <pubDate>Sun, 15 Jul 2018 03:11:01 +0200</pubDate>
       
       <guid>https://nodend.com/snippet/instant-alpha/</guid>
-      <description>Snippet Fish 1 2 3  function instantalpha convert $argv[1] -fuzz $argv[2]% -transparent $argv[3] $argv[1].alpha.png end   Bash 1 2 3  function instantalpha { convert &amp;#34;$1&amp;#34; -fuzz &amp;#34;$2&amp;#34;% -transparent &amp;#34;$3&amp;#34; &amp;#34;$1&amp;#34;.alpha.png }    Usage 1 2 3 4  # file | source png, output will be .alpha.png # -fuzz distance | colors within this distance are considered equal # -transparent color | make this color transparent within the image instantalpha image.</description>
+      <description>&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
